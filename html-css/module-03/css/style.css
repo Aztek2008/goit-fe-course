@@ -55,5 +55,5 @@ button {
   padding: 0;
   width: 162px;
   height: 58px;
-  display: block;
+  display: inline-block;
 }
