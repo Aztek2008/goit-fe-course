@@ -20,12 +20,16 @@ ul {
   list-style: none;
 }
 
-.main-nav-item a{
+.main-nav-item a {
   text-transform: uppercase;
   color: rgb(98, 98, 98);
   text-decoration: none;
   font-size: 14px;
   line-height: 24px;
+}
+
+.main-nav-item a:hover {
+  color: #03a9f4;
 }
 
 h2 {
@@ -46,11 +50,10 @@ button {
   font-size: 20px;
   line-height: 24px;
   color: rgb(98, 98, 98);
-  /* background-color: white; */
+  background-color:#ffffff;
   border: 1px rgb(98, 98, 98) solid;
   padding: 0;
   width: 162px;
   height: 58px;
-  outline: none;
   display: block;
 }
