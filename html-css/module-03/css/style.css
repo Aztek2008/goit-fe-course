@@ -14,9 +14,9 @@ body {
   color: rgb(98, 98, 98);
   line-height: 24px;
   background-image: url('img\Livello 7.png') width "1200" height "1446";
-  width: 860px;
+  /* width: 900px; */
   margin: 0 auto;
-  padding-top: 70px;
+  padding: 70px 90px 0 150px;
 }
 
 header {
@@ -61,6 +61,14 @@ ul {
 
 .main-nav-item a:hover {
   color: #03a9f4;
+}
+
+.article {
+  display: inline-block;
+  width: 420px;
+  height: 473px;
+  margin-right: 60px;
+  overflow: hidden;
 }
 
 h2 {
