@@ -14,10 +14,41 @@ body {
   color: rgb(98, 98, 98);
   line-height: 24px;
   background-image: url('img\Livello 7.png') width "1200" height "1446";
+  width: 860px;
+  margin: 0 auto;
+  padding-top: 70px;
+}
+
+header {
+  margin-bottom: 100px;
 }
 
 ul {
   list-style: none;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 122px;
+}
+
+.nav {
+  width: 100%;
+}
+
+.main-nav-item {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.main-nav-item.lifestyle {
+  margin-right: 120px;
+}
+
+.main-nav-item.photodiary {
+  margin-right: 104px;
+}
+
+.main-nav-item.music {
+  margin-right: 92px;
 }
 
 .main-nav-item a {
