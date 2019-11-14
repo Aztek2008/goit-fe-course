@@ -15,7 +15,7 @@ body {
   font-size: 14px;
   line-height: 24px;
   width: 1200px;
-  background-image: url('img\Livello 7.png') width "1200" height "1446";
+  background-image: url('img\Livello_7.png') width "1200" height "1446";
   padding: 70px 150px 22px 150px;
   box-sizing: border-box;
 }
@@ -30,12 +30,6 @@ ul {
   /* width: 90%; */
   margin: 0 auto;
   padding: 0 164px 0 162px;
-}
-
-section {
-  font-size: 0;
-	line-height: 0;
-	letter-spacing: -1px;
 }
 
 h2 {
@@ -68,6 +62,12 @@ h2 {
 
 .main-nav-item a:hover {
   color: #03a9f4;
+}
+
+.main-section {
+  font-size: 0;
+	line-height: 0;
+	letter-spacing: -1px;
 }
 
 .article {
