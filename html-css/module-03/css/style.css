@@ -16,7 +16,7 @@ body {
   background-image: url('img\Livello 7.png') width "1200" height "1446";
   /* width: 900px; */
   margin: 0 auto;
-  padding: 70px 90px 0 150px;
+  padding: 70px 90px 22px 150px;
 }
 
 header {
@@ -69,6 +69,10 @@ ul {
   height: 473px;
   margin-right: 60px;
   overflow: hidden;
+}
+
+.article-separation {
+  height: 138px;
 }
 
 h2 {
