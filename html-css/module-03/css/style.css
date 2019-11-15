@@ -133,6 +133,6 @@ img {
 }
 
 .button:hover {
-  background-color: #fff;
+  border-color: #03a9f4;
   color: #03a9f4;
 }
