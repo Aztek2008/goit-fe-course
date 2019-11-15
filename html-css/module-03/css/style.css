@@ -1,3 +1,13 @@
+html {
+  box-sizing:border-box;
+}
+
+*,
+*::before,
+*::after {
+box-sizing: inherit;
+}
+
 .visually-hidden {
 	position: absolute !important;
 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
@@ -14,27 +24,39 @@ body {
   color: rgb(98, 98, 98);
   font-size: 14px;
   line-height: 24px;
-  width: 1200px;
   background-image: url('img\Livello_7.png') width "1200" height "1446";
-  padding: 70px 150px 22px 150px;
-  box-sizing: border-box;
-}
-
-header {
-  margin-bottom: 100px;
 }
 
 ul {
   list-style: none;
   font-size: 0;
-  /* width: 90%; */
-  margin: 0 auto;
-  padding: 0 164px 0 162px;
+  padding: 0;
+  text-align: center;
 }
 
-h2 {
+h2,
+p {
+  margin: 0;
+}
+
+img {
+  margin-bottom: 26px;
+}
+
+.superheader {
+  padding: 77px 0 105px;
+}
+
+.heading2 {
   line-height: 36px;
   font-size: 30px;
+  margin-bottom: 26px;
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+
 }
 
 .main-nav-item {
@@ -58,6 +80,7 @@ h2 {
   text-transform: uppercase;
   color: rgb(98, 98, 98);
   text-decoration: none;
+  display: block;
 }
 
 .main-nav-item a:hover {
@@ -67,7 +90,8 @@ h2 {
 .main-section {
   font-size: 0;
 	line-height: 0;
-	letter-spacing: -1px;
+  letter-spacing: -1px;
+  padding-bottom: 22px;
 }
 
 .article {
@@ -93,6 +117,7 @@ h2 {
   line-height: 17px;
   color: rgb(180, 173, 158);
   text-transform: uppercase;
+  margin-bottom: 15px;
 }
 
 .button {
@@ -107,3 +132,7 @@ h2 {
   margin: 88px auto 0;
 }
 
+.button:hover {
+  background-color: #fff;
+  color: #03a9f4;
+}
