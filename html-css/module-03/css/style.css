@@ -53,6 +53,10 @@ img {
   margin-bottom: 26px;
 }
 
+.heading2:hover {
+  color: #03a9f4;
+}
+
 .container {
   width: 900px;
   margin: 0 auto;
