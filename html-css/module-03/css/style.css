@@ -108,6 +108,7 @@ p {
   line-height: 36px;
   font-size: 30px;
   margin-bottom: 33px;
+  cursor: pointer;
 }
 
 .heading2:hover,
@@ -133,6 +134,7 @@ p {
   display: block;
   background-color: transparent;
   margin: 88px auto 0;
+  cursor: pointer;
 }
 
 .button:hover,
