@@ -38,7 +38,7 @@ html {
 
 /* ОБОЛОЧКИ */
 body {
-  width: 1600px;
+  
 }
 
 .container {
@@ -55,13 +55,7 @@ body {
 }
 
 .main-menu {
- /* display: block; */
  height: 30px;
- /* outline: 1px solid tomato; */
-}
-
-.logo {
-  /* display: block; */
 }
 
 .logo:first-letter {
@@ -121,7 +115,6 @@ h2::after {
   display: block;
   content: "";
   background-color: rgb(26, 188, 156);
-  /* left: 735px; */
   width: 164px;
   height: 7px;
   margin: 32px auto 82px;
@@ -165,7 +158,6 @@ h2::after {
   width: 255px;
   height: 37px;
   background-color: rgb(50, 50, 50);
-  /* vertical-align: baseline; */
   padding-left: 13px;
 }
 
@@ -177,7 +169,6 @@ h2::after {
   font-family: "Roboto";
   color: rgb(255, 255, 255);
   text-transform: uppercase;
-  /* line-height: 1.778; */
   text-align: left;
   margin: 0;
   padding: 0;
@@ -192,7 +183,6 @@ h2::after {
   font-family: "Roboto";
   color: rgb(255, 255, 255);
   text-transform: uppercase;
-  /* line-height: 1.778; */
   text-align: center;
 }
 
