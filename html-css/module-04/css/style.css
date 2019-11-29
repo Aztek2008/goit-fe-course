@@ -89,9 +89,7 @@ body {
 .list-item a {
   display: block;
   font-size: 14px;
-  font-family: "Open Sans";
   color: rgb(15, 1, 1);
-  font-weight: bold;
   line-height: 30px;
 }
 
@@ -103,7 +101,6 @@ body {
 /* MAIN SECTION */
 h2 {
   font-size: 48px;
-  font-family: "Roboto";
   text-transform: uppercase;
   color: rgb(81, 81, 81);
   line-height: 0.667;
@@ -166,7 +163,6 @@ h2::after {
   float: left;
   font-size: 18px;
   line-height: 37px;
-  font-family: "Roboto";
   color: rgb(255, 255, 255);
   text-transform: uppercase;
   text-align: left;
@@ -180,7 +176,6 @@ h2::after {
   line-height: 37px;
   background-color: rgba(255, 255, 255, .3);
   font-size: 18px;
-  font-family: "Roboto";
   color: rgb(255, 255, 255);
   text-transform: uppercase;
   text-align: center;
@@ -206,9 +201,8 @@ h2::after {
 
 
 .news-image-caption {
-  /* display: block; */
   font-size: 18px;
-  font-family: "Open Sans";
+  font-family: "Open Sans semibold";
   color: rgb(85, 82, 82);
   line-height: 26px;
 }
