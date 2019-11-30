@@ -106,7 +106,6 @@ h2 {
   line-height: 32px;
   text-align: center;
   margin: 0;
-  /* margin-bottom: 32px; */
 }
 
 h2::after {
@@ -122,7 +121,6 @@ h2::after {
   padding-top: 60px;
 }
 
-
 .featured-section-list {
   margin: 0;
   padding: 92px 0 103px;
@@ -136,7 +134,8 @@ h2::after {
   height: 320px;
 }
 
-.featured-item:hover .caption {
+.featured-item:hover .caption,
+.featured-item:focus .caption {
   background-color: rgb(26, 188, 156);
 }
 
@@ -204,7 +203,6 @@ h2::after {
   margin-right: 30px;
 }
 
-
 .news-image-caption {
   font-size: 18px;
   font-family: "Open Sans semibold";
@@ -243,6 +241,8 @@ h2::after {
   text-align: center;
 }
 
-.button:hover {
+.button:hover,
+.button:focus {
   background-color: rgb(85, 82, 82);
+  cursor: pointer;
 }
