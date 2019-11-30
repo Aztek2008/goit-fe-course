@@ -31,16 +31,16 @@ body {
   font-family: "Roboto Black";
 }
 
-.list-item {
-  list-style: none;
-}
-
 .logo-link,
 .list-item a {
   text-decoration: none;
 }
 
-/* ОБОЛОЧКИ */
+.menu.list-item a:hover,
+.menu.list-item a:focus {
+  color: rgb(26, 188, 156);
+}
+
 .container {
   max-width: 1110px;
   margin: 0 auto;
@@ -68,22 +68,27 @@ body {
   width: 90px;
   float: left;
   font-size: 30px;
+  line-height: 30px;
   font-family: "Roboto";
   color: rgb(85, 82, 82);
+  margin-right: 545.5px;
 }
 
 .menu-list {
-  float: right;
-  width: 540px;
+  float: left;
+  width: 474.5px;
   margin: 0;
   padding: 0;
   font-size: 0;
 }
 
 .menu.list-item {
-  display: block;
-  margin-left: 6.5%;
-  float: right;
+  float: left;
+  list-style: none;
+}
+
+.menu.list-item:not(:last-child) {
+  margin-right: 35px;
 }
 
 .list-item a {
@@ -93,19 +98,15 @@ body {
   line-height: 30px;
 }
 
-.menu.list-item a:hover,
-.menu.list-item a:focus {
-  color: rgb(26, 188, 156);
-}
-
 /* MAIN SECTION */
 h2 {
   font-size: 48px;
   text-transform: uppercase;
   color: rgb(81, 81, 81);
-  line-height: 0.667;
+  line-height: 32px;
   text-align: center;
-  margin-bottom: 32px;
+  margin: 0;
+  /* margin-bottom: 32px; */
 }
 
 h2::after {
@@ -114,21 +115,18 @@ h2::after {
   background-color: rgb(26, 188, 156);
   width: 164px;
   height: 7px;
-  margin: 32px auto 82px;
+  margin: 32px auto 0;
 }
 
 .featured-section {
-  margin: 0;
-  padding: 0;
-  font-size: 0;
-  margin-bottom: 105px;
+  padding-top: 60px;
 }
 
-.news-section {
+
+.featured-section-list {
   margin: 0;
-  padding: 0;
+  padding: 92px 0 103px;
   font-size: 0;
-  margin-bottom: 82px;
 }
 
 .featured-item {
@@ -181,10 +179,17 @@ h2::after {
   text-align: center;
 }
 
+.news-section {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  padding-bottom: 82px;
+}
+
 .news-list {
   font-family: "Open Sans";
   margin: 0;
-  padding: 0;
+  padding: 82px 0 0;
   font-size: 0;
 }
 
@@ -217,13 +222,10 @@ h2::after {
 }
 
 .news-text {
-  display: block;
   font-size: 14px;
   font-family: "Open Sans";
   color: rgb(85, 82, 82);
   line-height: 26px;
-  width: 353px;
-  height: 66px;
   margin-bottom: 19px;
 }
 
@@ -237,6 +239,10 @@ h2::after {
   font-size: 16px;
   font-family: "Open Sans";
   color: rgb(255, 255, 255);
-  line-height: 26px;
+  line-height: 51px;
   text-align: center;
+}
+
+.button:hover {
+  background-color: rgb(85, 82, 82);
 }
