@@ -65,18 +65,15 @@ body {
 
 .logo-link {
   display: block;
-  width: 90px;
   float: left;
   font-size: 30px;
   line-height: 30px;
   font-family: "Roboto";
   color: rgb(85, 82, 82);
-  margin-right: 545.5px;
 }
 
 .menu-list {
-  float: left;
-  width: 474.5px;
+  float: right;
   margin: 0;
   padding: 0;
   font-size: 0;
@@ -203,11 +200,16 @@ h2::after {
   margin-right: 30px;
 }
 
+.news-image {
+  margin-bottom: 10px;
+}
+
 .news-image-caption {
   font-size: 18px;
   font-family: "Open Sans semibold";
   color: rgb(85, 82, 82);
   line-height: 26px;
+  margin: 0;
 }
 
 .news-image-caption::after {
@@ -224,7 +226,8 @@ h2::after {
   font-family: "Open Sans";
   color: rgb(85, 82, 82);
   line-height: 26px;
-  margin-bottom: 19px;
+  margin: 0;
+  margin-bottom: 11px;
 }
 
 .button {
