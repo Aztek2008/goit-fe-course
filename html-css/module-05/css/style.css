@@ -46,7 +46,7 @@ ul {
 }
 
 .main {
-  width: 1600px;
+  /* width: 1600px; */
   margin: 0 auto;
 }
 
@@ -367,6 +367,7 @@ background-color: rgb(26, 188, 156);
 /* ФУТЕР */
 
 .site-footer {
+  width: 100%;
   height: 88px;
   background-color: #323232;
 }
