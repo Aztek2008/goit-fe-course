@@ -124,8 +124,12 @@ ul {
 }
 
 .advertise-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
   position: absolute;
-  background-size: cover;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .image-overlayer {
@@ -295,14 +299,15 @@ background-color: rgb(26, 188, 156);
   border-color: rgb(255, 255, 255); /*НЕ ПОЛУЧАЕТСЯ ДОБАВИТЬ ПРОЗРАЧНОСТЬ - СТАНОВИТСЯ СЕРЫМ!*/
   border-style: solid;
   background-color: rgb(50, 50, 50);
-  opacity: 66%;
   z-index: 1;
   visibility: hidden;
-  transition: visibility .4s linear;
+  opacity: 0;
+  transition: all .4s;
 }
 
 .new-collection-item:hover .hover-menu {
   visibility: visible;
+  opacity: 66%;
 }
 
 .feature-row {
