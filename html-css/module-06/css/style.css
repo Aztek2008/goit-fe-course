@@ -414,7 +414,9 @@ input::placeholder {
   text-transform: uppercase;
   line-height: 1.2;
   text-align: center;
+  cursor: pointer;
 }
+
 .input-field {
   width: 230px;
   height: 40px;
