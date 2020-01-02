@@ -1,0 +1,153 @@
+/* MOBILE ONLY */
+
+@media (min-width: 320px) and (max-width: 747px) {
+  .section.about {
+    padding-top: 20px;
+    background-image: url(../img/Head-image/Header\ mobile.png);
+  }
+
+  .header-contain {
+    margin-bottom: 115px;
+  }
+
+  .section {
+    width: 320px;
+  }
+
+  .main-title {
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 16px;
+  }
+
+  .main-title-caption {
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0 50px 18px;
+  }
+
+  .main-title-caption + button {
+    width: 280px;
+    margin-bottom: 138px;
+  }
+
+  .section.meet-a-partner {
+    padding-bottom: 58px;
+  }
+
+  .partners-list-item {
+    margin: 0 auto;
+  }
+}
+
+/* TABLET */
+
+@media (min-width: 748px) {
+  .section.about {
+    padding-top: 38px;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .main-title {
+    width: 532px;
+    font-size: 52px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+  }
+
+  .main-title-caption {
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 35px;
+  }
+
+  .main-title-caption + button {
+    width: 226px;
+    margin-bottom: 234px;
+  }
+
+  .section.meet-a-partner {
+    padding-bottom: 42px;
+  }
+
+  .meet-a-partner-title {
+    margin-bottom: 33px;
+  }
+
+  .partners-list {
+    display: flex;
+    margin: 0 auto 10px;
+    justify-content: space-between;
+  }
+
+  .partners-list-item:nth-child(1) {
+    order: 1;
+  }
+
+  .partners-list-item:nth-child(2) {
+    order: 3;
+  }
+
+  .partners-list-item:nth-child(3) {
+    order: 2;
+  }
+
+  .partners-list-item:nth-child(4) {
+    order: 4;
+  }
+
+  .partners-list + button {
+    width: 197px;
+  }
+}
+
+/* TABLET ONLY */
+
+@media (min-width: 748px) and (max-width: 1440px) {
+  .section {
+    width: 748px;
+}
+
+  .section.about {
+    background-image: url(../img/Head-image/Header\ tablet.png);
+  }
+
+  .header {
+    width: 673px;
+    margin-bottom: 135px;
+  }
+
+  .partners-list {
+    flex-wrap: wrap;
+    width: 532px;
+  }
+
+  .partners-list-item:not(:nth-child(even)) {
+    margin-bottom: 30px;
+  }
+}
+
+/* DESKTOP */
+
+@media (min-width: 1440px) {
+  .section.about {
+    background-image: url(../img/Head-image/Header\ desktop.png);
+    width: 1440px;
+  }
+
+  .header {
+    width: 942px;
+    margin-bottom: 150px;
+  }
+
+  .section.meet-a-partner {
+    width: 940px;
+  }
+}

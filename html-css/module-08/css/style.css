@@ -1,0 +1,210 @@
+/* TYPOGRAPHY */
+
+@font-face {
+  font-family: "Montserrat-reg";
+  src: url(../fonts/montserrat-v14-latin-regular.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat-bold";
+  src: url(../fonts/montserrat-v14-latin-700.woff2) format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto-reg";
+  src: url(../fonts/Roboto-Regular.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto-thinn";
+  src: url(../fonts/Roboto-Thin.ttf) format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+/* GENERAL */
+
+html {
+  box-sizing: border-box;
+  font-family: "Montserrat-bold";
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+button {
+  border: 2px solid transparent;
+  border-radius: 20px;
+  background-color: transparent;
+  font-size: 14px;
+  line-height: 1.2;
+  height: 40px;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+/* MAIN */
+
+.section {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.container {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* ABOUT SECTION */
+
+.section.about {
+    background-color: rgba(26, 25, 21, .2);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container.about {
+  width: 100%;
+  color: rgb(255, 255, 255);
+}
+
+/* HEADER AND LOGO */
+
+.header {
+  margin-bottom: 34px;
+}
+
+.header-contain button {
+  width: 94px;
+  height: 40px;
+  transition: border-color .2s linear;
+}
+
+.header-contain button:hover,
+.header-contain button:focus {
+  border-color: rgb(255, 255, 255);
+}
+
+.logo {
+  display: block;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.logo-link {
+  display: block;
+}
+
+/* ABOUT SECTION TITLE */
+
+.main-title {
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
+.main-title-caption {
+  font-family: "Roboto-thinn";
+  margin: 0 auto;
+}
+
+.main-title-caption + button {
+  background-color: rgb(255, 78, 80);
+}
+
+/* MEET A PARTNER SECTION */
+
+.section.meet-a-partner {
+  padding-top: 68px;
+}
+
+.meet-a-partner-title {
+  font-size: 22px;
+  line-height: 1.2;
+  margin: 0 0 20px;
+}
+
+/* PARTNERS LIST */
+
+.partners-list-item {
+  width: 220px;
+  position: relative;
+}
+
+.partner-image {
+  margin-bottom: 20px;
+}
+
+.partner-name {
+  font-size: 14px;
+  line-height: 17px;
+  margin: 0 0 17px;
+}
+
+.partner-description {
+  font-family: "Roboto-thinn";
+  font-size: 14px;
+  line-height: 17px;
+  color: #666666;
+  margin: 0 0 29px;
+}
+
+/* PARTER ICONS */
+
+.partners-list-item::after {
+  position: absolute;
+  background-color: transparent;
+  top: 85px;
+  right: 55px;
+}
+
+.partners-list-item:nth-of-type(1)::after {
+  content: url(../img/Icons/TV-red.png);
+}
+
+.partners-list-item:nth-of-type(2)::after {
+  content: url(../img/Icons/Tube-orange.png);
+}
+
+.partners-list-item:nth-of-type(3)::after {
+  content: url(../img/Icons/Cup-green.png);
+}
+
+.partners-list-item:nth-of-type(4)::after {
+  content: url(../img/Icons/Plane-blue.png);
+}
+
+/* PARTNERS SECTION BUTTON */
+
+.partners-list + button {
+  color: rgb(255, 78, 80);
+  width: 284px;
+  height: 44px;
+  transition: border-color .2s linear;
+}
+
+.partners-list + button:hover,
+.partners-list + button:focus {
+  border-color: rgb(255, 78, 80);
+}
