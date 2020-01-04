@@ -3,7 +3,7 @@
 @media (min-width: 320px) and (max-width: 747px) {
   .section.about {
     padding-top: 20px;
-    background-image: url(../img/Head-image/Header\ mobile.png);
+    background-image: url(../img/Head-image/header_mobile.png);
   }
 
   .header-contain {
@@ -47,7 +47,7 @@
     padding-top: 38px;
   }
 
-  .header {
+  .header-buttons {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -110,16 +110,16 @@
 
 /* TABLET ONLY */
 
-@media (min-width: 748px) and (max-width: 1440px) {
+@media (min-width: 748px) and (max-width: 960px) {
   .section {
     width: 748px;
 }
 
   .section.about {
-    background-image: url(../img/Head-image/Header\ tablet.png);
+    background-image: url(../img/Head-image/header_tablet.png);
   }
 
-  .header {
+  .header-buttons {
     width: 673px;
     margin-bottom: 135px;
   }
@@ -136,14 +136,13 @@
 
 /* DESKTOP */
 
-@media (min-width: 1440px) {
+@media (min-width: 960px) {
   .section.about {
-    background-image: url(../img/Head-image/Header\ desktop.png);
-    width: 1440px;
+    background-image: url(../img/Head-image/header_desktop.png);
   }
 
-  .header {
-    width: 942px;
+  .header-buttons {
+    width: 940px;
     margin-bottom: 150px;
   }
 
