@@ -1,8 +1,10 @@
 /* MOBILE ONLY */
 
-@media (min-width: 320px) and (max-width: 747px) {
-  .section.about {
-    padding-top: 20px;
+@media (min-width: 320px) and (max-width: 767px) {
+  .header {
+    padding: 20px 0 138px;
+    width: 320px;
+    margin: 0 auto;
     background-image: url(../img/Head-image/header_mobile.png);
   }
 
@@ -26,9 +28,8 @@
     margin: 0 50px 18px;
   }
 
-  .main-title-caption + button {
+  .main-title-caption+button {
     width: 280px;
-    margin-bottom: 138px;
   }
 
   .section.meet-a-partner {
@@ -40,11 +41,12 @@
   }
 }
 
-/* TABLET */
+/* TABLET AND DESKTOP */
 
-@media (min-width: 748px) {
-  .section.about {
-    padding-top: 38px;
+@media (min-width: 768px) {
+  .header {
+    padding: 38px 0 234px;
+    margin: 0 auto;
   }
 
   .header-buttons {
@@ -68,9 +70,8 @@
     margin-bottom: 35px;
   }
 
-  .main-title-caption + button {
+  .main-title-caption+button {
     width: 226px;
-    margin-bottom: 234px;
   }
 
   .section.meet-a-partner {
@@ -103,25 +104,26 @@
     order: 4;
   }
 
-  .partners-list + button {
+  .partners-list+button {
     width: 197px;
   }
 }
 
 /* TABLET ONLY */
 
-@media (min-width: 748px) and (max-width: 960px) {
-  .section {
-    width: 748px;
-}
-
-  .section.about {
+@media (min-width: 768px) and (max-width: 960px) {
+  .header {
+    width: 768px;
     background-image: url(../img/Head-image/header_tablet.png);
   }
 
   .header-buttons {
     width: 673px;
     margin-bottom: 135px;
+  }
+
+  .section {
+    width: 768px;
   }
 
   .partners-list {
@@ -137,7 +139,7 @@
 /* DESKTOP */
 
 @media (min-width: 960px) {
-  .section.about {
+  .header {
     background-image: url(../img/Head-image/header_desktop.png);
   }
 

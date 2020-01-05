@@ -34,6 +34,8 @@
 html {
   box-sizing: border-box;
   font-family: "Montserrat-bold";
+  text-align: center;
+  color: #ffffff;
 }
 
 *,
@@ -64,33 +66,14 @@ button {
   cursor: pointer;
 }
 
-/* MAIN */
-
-.section {
-  text-align: center;
-  margin: 0 auto;
+.header {
+  background-color: rgba(25, 24, 20, 0.2);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.container {
-  text-align: center;
-  margin: 0 auto;
-}
-
-/* ABOUT SECTION */
-
-.section.about {
-    background-color: rgba(26, 25, 21, .2);
-    background-blend-mode: multiply;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.container.about {
-  width: 100%;
-  color: rgb(255, 255, 255);
-}
-
-/* HEADER AND LOGO */
+/* HEADER BUTTONS AND LOGO */
 
 .header-buttons {
   margin-bottom: 34px;
@@ -104,17 +87,13 @@ button {
 
 .header-contain button:hover,
 .header-contain button:focus {
-  border-color: rgb(255, 255, 255);
-}
-
-.logo {
-  display: block;
-  font-size: 20px;
-  line-height: 1.2;
+  border-color: #ffffff;
 }
 
 .logo-link {
   display: block;
+  font-size: 20px;
+  line-height: 1.2;
 }
 
 /* ABOUT SECTION TITLE */
@@ -129,14 +108,16 @@ button {
   margin: 0 auto;
 }
 
-.main-title-caption + button {
-  background-color: rgb(255, 78, 80);
+.main-title-caption+button {
+  background-color: #ff4e50;
 }
 
 /* MEET A PARTNER SECTION */
 
 .section.meet-a-partner {
   padding-top: 68px;
+  color: #333333;
+  margin: 0 auto;
 }
 
 .meet-a-partner-title {
@@ -197,14 +178,14 @@ button {
 
 /* PARTNERS SECTION BUTTON */
 
-.partners-list + button {
-  color: rgb(255, 78, 80);
+.partners-list+button {
+  color: #ff4e50;
   width: 284px;
   height: 44px;
   transition: border-color .2s linear;
 }
 
-.partners-list + button:hover,
-.partners-list + button:focus {
-  border-color: rgb(255, 78, 80);
+.partners-list+button:hover,
+.partners-list+button:focus {
+  border-color: #ff4e50;
 }
