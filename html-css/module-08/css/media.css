@@ -3,6 +3,7 @@
 @media (min-width: 320px) and (max-width: 767px) {
   .header {
     padding: 20px 0 138px;
+    max-width: 320px;
     margin: 0 auto;
     background-image: url(../img/Head-image/header_mobile.png);
   }
@@ -31,7 +32,7 @@
 
   .section.meet-a-partner {
     padding-bottom: 58px;
-    width: 320px;
+    width: 300px;
   }
 
   .partners-list-item {
@@ -120,7 +121,7 @@
   }
 
   .section {
-    width: 768px;
+    width: 748px;
   }
 
   .partners-list {
