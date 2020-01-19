@@ -32,10 +32,6 @@
     margin: 0 auto 18px;
   }
 
-  .main-title-button {
-    width: 280px;
-  }
-
   .main-contain {
     max-width: 320px;
     margin: 0 auto;
@@ -70,16 +66,8 @@
     margin-bottom: 35px;
   }
 
-  .main-title-button {
-    width: 226px;
-  }
-
   .main-contain {
     padding-bottom: 40px;
-  }
-
-  .meet-a-partner-title {
-    margin-bottom: 33px;
   }
 
   .partners-list-item:nth-child(1) {
@@ -99,7 +87,8 @@
   }
 
   .partners-list-button {
-    width: 197px;
+    padding: 0 26px;
+    /* width: 197px; */
   }
 }
 
