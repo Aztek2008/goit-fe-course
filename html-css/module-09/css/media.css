@@ -14,9 +14,15 @@
     justify-content: center;
   }
 
+  .logo-link {
+    justify-content: center;
+    margin-bottom: 35px;
+  }
+
   .main-title {
     font-size: 30px;
     line-height: 36px;
+    margin-bottom: 1rem;
   }
 
   .main-title-caption {
@@ -34,6 +40,7 @@
     max-width: 320px;
     margin: 0 auto;
     padding-top: 68px;
+    padding-bottom: 57px;
   }
 
 }
@@ -46,8 +53,12 @@
     margin: 0 auto;
   }
 
+  .header-logo-buttons-area {
+    margin-bottom: 153px;
+  }
+
   .main-title {
-    width: 532px;
+    width: 510px;
     font-size: 52px;
     line-height: 1.2;
     margin-bottom: 25px;
@@ -63,18 +74,12 @@
     width: 226px;
   }
 
-  .section.meet-a-partner {
-    padding-bottom: 42px;
+  .main-contain {
+    padding-bottom: 40px;
   }
 
   .meet-a-partner-title {
     margin-bottom: 33px;
-  }
-
-  .partners-list {
-    display: flex;
-    margin: 0 auto 10px;
-    justify-content: space-between;
   }
 
   .partners-list-item:nth-child(1) {
@@ -93,7 +98,7 @@
     order: 4;
   }
 
-  .partners-list+button {
+  .partners-list-button {
     width: 197px;
   }
 }
@@ -105,13 +110,9 @@
     background-image: url(../img/Head-image/header_tablet.png);
   }
 
-   .section {
-    width: 748px;
-  }
-
-  .partners-list {
+   .partners-list {
     flex-wrap: wrap;
-    width: 532px;
+    width: 510px;
   }
 
   .partners-list-item:not(:nth-child(even)) {
@@ -126,7 +127,4 @@
     background-image: url(../img/Head-image/header_desktop.png);
   }
 
-   .section.meet-a-partner {
-    width: 940px;
-  }
 }

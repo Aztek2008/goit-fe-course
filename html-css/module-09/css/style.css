@@ -66,7 +66,6 @@ button {
   padding: 0;
   outline: none;
   cursor: pointer;
-  margin: 0 auto;
 }
 
 .header {
@@ -96,6 +95,11 @@ button {
   line-height: 1.2;
 }
 
+.navbar-brand {
+  margin: 0;
+  padding: 0;
+}
+
 .main-title-caption {
   font-family: "Roboto-thinn";
 }
@@ -104,9 +108,9 @@ button {
   background-color: #ff4e50;
 }
 
-/* MEET A PARTNER SECTION */
+/* MAIN SECTION */
 
-.section.meet-a-partner {
+.main-contain {
   padding-top: 68px;
   color: #333333;
   margin: 0 auto;
@@ -170,14 +174,14 @@ button {
 
 /* PARTNERS SECTION BUTTON */
 
-.partners-list+button {
+.partners-list-button {
   color: #ff4e50;
   width: 284px;
   height: 44px;
   transition: border-color .2s linear;
 }
 
-.partners-list+button:hover,
-.partners-list+button:focus {
+.partners-list-button:hover,
+.partners-list-button:focus {
   border-color: #ff4e50;
 }
