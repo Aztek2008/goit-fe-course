@@ -38,7 +38,6 @@
     padding-top: 68px;
     padding-bottom: 57px;
   }
-
 }
 
 /* TABLET AND DESKTOP */
@@ -46,7 +45,6 @@
 @media (min-width: 768px) {
   .header {
     padding: 38px 0 234px;
-    margin: 0 auto;
   }
 
   .header-logo-buttons-area {
@@ -88,13 +86,12 @@
 
   .partners-list-button {
     padding: 0 26px;
-    /* width: 197px; */
   }
 }
 
 /* TABLET ONLY */
 
-@media (min-width: 768px) and (max-width: 960px) {
+@media (min-width: 768px) and (max-width: 959px) {
   .header {
     background-image: url(../img/Head-image/header_tablet.png);
   }
@@ -115,5 +112,4 @@
   .header {
     background-image: url(../img/Head-image/header_desktop.png);
   }
-
 }
