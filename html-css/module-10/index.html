@@ -17,11 +17,11 @@
       <nav class="header__nav">
         <a href="#" class="link header__logo">MoGo</a>
         <ul class="list header__list">
-          <li class="header__item underlined-hovered color-hover">About</li>
-          <li class="header__item underlined-hovered color-hover">Service</li>
-          <li class="header__item underlined-hovered color-hover">Work</li>
-          <li class="header__item underlined-hovered color-hover">Blog</li>
-          <li class="header__item underlined-hovered color-hover">Contract</li>
+          <li class="header__item underlined-hovered color-hover"><a class="link" href="#">About</a></li>
+          <li class="header__item underlined-hovered color-hover"><a class="link" href="#">Service</a></li>
+          <li class="header__item underlined-hovered color-hover"><a class="link" href="#">Work</a></li>
+          <li class="header__item underlined-hovered color-hover"><a class="link" href="#">Blog</a></li>
+          <li class="header__item underlined-hovered color-hover"><a class="link" href="#">Contract</a></li>
           <li class="header__item underlined-hovered color-hover">
             <a href="#" class="link cart color-hover">
               <svg xmlns="http://www.w3.org/2000/svg" class="header__item_svg" viewbox="0 0 18 15">
@@ -31,10 +31,11 @@
             </a>
           </li>
           <li class="header__item underlined-hovered">
-            <svg xmlns="http://www.w3.org/2000/svg" class="header__item_svg" viewbox="0 0 18 18">
-              <path class="header__svg color-hover" fill-rule="evenodd"
-                d="M17.317 14.983a1.65 1.65 0 01-2.334 2.333l-4.836-4.835A6.56 6.56 0 016.8 13.4a6.6 6.6 0 116.6-6.6 6.56 6.56 0 01-.919 3.347l4.836 4.836zM6.8 1.849a4.95 4.95 0 10.001 9.901A4.95 4.95 0 006.8 1.85z" />
-            </svg>
+            <a href="" class="link">
+              <svg xmlns="http://www.w3.org/2000/svg" class="header__item_svg" viewbox="0 0 18 18">
+                <path class="header__svg color-hover" d="M17.317 14.983a1.65 1.65 0 01-2.334 2.333l-4.836-4.835A6.56 6.56 0 016.8 13.4a6.6 6.6 0 116.6-6.6 6.56 6.56 0 01-.919 3.347l4.836 4.836zM6.8 1.849a4.95 4.95 0 10.001 9.901A4.95 4.95 0 006.8 1.85z" />
+              </svg>
+            </a>
             <!-- <input class="input-search" type="search" name="" placeholder="Search..."> -->
           </li>
         </ul>
@@ -45,7 +46,7 @@
     </div>
   </header>
   <main class="main">
-    <div class="container service__container">
+    <section class="container service__container">
       <p class="header__caption header__caption_service">We work with</p>
       <h2 class="header__title underlined">Amazing Services</h2>
       <ul class="list service__list">
@@ -86,8 +87,8 @@
           </p>
         </li>
       </ul>
-    </div>
-    <div class="container team__container">
+    </section>
+    <section class="container team__container">
       <p class="header__caption header__caption_team">Who we are</p>
       <h2 class="header__title underlined">Meet our team</h2>
       <p class="caption team__caption">
@@ -104,7 +105,7 @@
               <li class="hover__item_socials">
                 <a href="https://www.facebook.com" class="link hover__link hover__link_facebook" target="_blank">
                   <svg class="hover__icon">
-                    <use href="../img/icons/social-icons/symbol-defs.svg#facebook-icon">
+                    <use href="img/icons/social-icons/symbol-defs.svg#facebook-icon">
                     </use>
                   </svg>
                 </a>
@@ -112,7 +113,7 @@
               <li class="hover__item_socials">
                 <a href="https://twitter.com" class="link hover__link hover__link_twitter" target="_blank">
                   <svg class="hover__icon">
-                    <use href="../img/icons/social-icons/symbol-defs.svg#instagram-icon">
+                    <use href="img/icons/social-icons/symbol-defs.svg#instagram-icon">
                     </use>
                   </svg>
                 </a>
@@ -120,7 +121,7 @@
               <li class="hover__item_socials">
                 <a href="https://www.pinterest.com" class="link hover__link hover__link_pinterest" target="_blank">
                   <svg class="hover__icon">
-                    <use href="../img/icons/social-icons/symbol-defs.svg#pin-icon">
+                    <use href="img/icons/social-icons/symbol-defs.svg#pin-icon">
                     </use>
                   </svg>
                 </a>
@@ -128,7 +129,7 @@
               <li class="hover__item_socials">
                 <a href="https://www.instagram.com" class="link hover__link hover__link_instagram" target="_blank">
                   <svg class="hover__icon">
-                    <use href="../img/icons/social-icons/symbol-defs.svg#twitter-icon">
+                    <use href="img/icons/social-icons/symbol-defs.svg#twitter-icon">
                     </use>
                   </svg>
                 </a>
@@ -223,17 +224,17 @@
           <p class="team__title_caption">Developer</p>
         </li>
       </ul>
-    </div>
-    <footer class="container footer">
-      <p class="footer__legal">
-        © 2016 MoGo free PSD template by <span class="footer__legal_span">Laaqiq</span>
-      </p>
-      <form action="#" method="get" class="footer__form">
-        <input type="text" name="email" class="footer__input" placeholder="Your Email...">
-        <input type="submit" value="subscribe" class="button footer__button">
-      </form>
-    </footer>
+    </section>
   </main>
+  <footer class="container footer">
+    <p class="footer__legal">
+      © 2016 MoGo free PSD template by <span class="footer__legal_span">Laaqiq</span>
+    </p>
+    <form action="#" method="get" class="footer__form">
+      <input type="text" name="email" class="footer__input" placeholder="Your Email...">
+      <input type="submit" value="subscribe" class="button footer__button">
+    </form>
+  </footer>
 </body>
 
 </html>

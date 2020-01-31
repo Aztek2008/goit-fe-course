@@ -241,6 +241,12 @@ left: 50%;
   margin: 0 auto;
 }
 
+.header__button:hover,
+.header__button:focus {
+  color: rgba(243, 129, 129);
+  outline: none;
+}
+
 /* WE WORK WITH SECTION */ /* WE WORK WITH SECTION */ /* WE WORK WITH SECTION */
 
 .service__list {
@@ -515,6 +521,7 @@ input::placeholder {
   line-height: 1.2;
   text-align: center;
   cursor: pointer;
+  outline: none;
 }
 
 .footer__input {
