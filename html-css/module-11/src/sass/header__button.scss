@@ -1,0 +1,12 @@
+.header__button {
+  width: 164px;
+  color: $main-white-color;
+  background-color: transparent;
+  margin: 0 auto;
+
+  &:hover,
+  &:focus {
+    color: $accent-color-red;
+    outline: none;
+  }
+}

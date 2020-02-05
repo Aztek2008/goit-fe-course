@@ -1,0 +1,9 @@
+.header__logo {
+    font-size: 30px;
+    line-height: 1.2;
+
+    &:hover,
+    &:focus {
+      color: $accent-color-yellow;
+    }
+  }

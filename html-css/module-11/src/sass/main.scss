@@ -1,0 +1,34 @@
+/*
+ * Все паршалы импортировать в этот файл
+ */
+
+@import 'normalize.scss';
+@import: 'helpers\variables';
+@import: 'helpers\mixins';
+@import 'base.scss';
+
+
+// COMPONENTS
+
+@import: 'container';
+@import: 'header';
+@import: 'header__container';
+@import: 'header__nav';
+@import: 'header__list';
+@import: 'header__logo';
+@import: 'header__caption_header';
+@import: 'header__title_header';
+@import: 'button';
+@import: 'header__button';
+@import: 'header__item';
+@import: 'underlined';
+@import: '';
+@import: '';
+@import: '';
+@import: '';
+@import: '';
+@import: '';
+@import: '';
+@import: '';
+@import: '';
+@import: '';
