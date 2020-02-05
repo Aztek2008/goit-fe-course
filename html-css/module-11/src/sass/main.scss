@@ -4,30 +4,30 @@
 
 @import 'base';
 @import 'normalize';
-@import: 'helpers/variables';
-@import: 'helpers/mixins';
+@import './helpers/variables';
+@import 'helpers/mixins';
 
 
 // COMPONENTS
 
-@import: 'components/container';
-@import: 'components/header';
-@import: 'components/header__container';
-@import: 'components/header__nav';
-@import: 'components/header__logo';
-@import: 'components/header__caption_header';
-@import: 'components/header__title_header';
-@import: 'components/button';
-@import: 'components/header__button';
-@import: 'components/header__item';
-@import: 'components/underlined';
-// @import: 'components/';
-// @import: 'components/';
-// @import: 'components/';
-// @import: 'components/';
-// @import: 'components/';
-// @import: 'components/';
-// @import: 'components/';
-// @import: 'components/';
-// @import: 'components/';
+@import 'components/container';
+@import 'components/header';
+@import 'components/header__container';
+@import 'components/header__nav';
+@import 'components/header__logo';
+@import 'components/header__caption_header';
+@import 'components/header__title_header';
+@import 'components/button';
+@import 'components/header__button';
+@import 'components/header__item';
+@import 'components/underlined';
+// @import 'components/';
+// @import 'components/';
+// @import 'components/';
+// @import 'components/';
+// @import 'components/';
+// @import 'components/';
+// @import 'components/';
+// @import 'components/';
+// @import 'components/';
 // @import: 'components/';
