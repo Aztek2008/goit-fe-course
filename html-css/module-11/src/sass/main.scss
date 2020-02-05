@@ -2,33 +2,32 @@
  * Все паршалы импортировать в этот файл
  */
 
+@import 'base';
 @import 'normalize';
 @import: 'helpers/variables';
 @import: 'helpers/mixins';
-@import 'base';
 
 
 // COMPONENTS
 
-@import: 'container';
-@import: 'header';
-@import: 'header__container';
-@import: 'header__nav';
-@import: 'header__list';
-@import: 'header__logo';
-@import: 'header__caption_header';
-@import: 'header__title_header';
-@import: 'button';
-@import: 'header__button';
-@import: 'header__item';
-@import: 'underlined';
-@import: '';
-@import: '';
-@import: '';
-@import: '';
-@import: '';
-@import: '';
-@import: '';
-@import: '';
-@import: '';
-@import: '';
+@import: 'components/container';
+@import: 'components/header';
+@import: 'components/header__container';
+@import: 'components/header__nav';
+@import: 'components/header__logo';
+@import: 'components/header__caption_header';
+@import: 'components/header__title_header';
+@import: 'components/button';
+@import: 'components/header__button';
+@import: 'components/header__item';
+@import: 'components/underlined';
+// @import: 'components/';
+// @import: 'components/';
+// @import: 'components/';
+// @import: 'components/';
+// @import: 'components/';
+// @import: 'components/';
+// @import: 'components/';
+// @import: 'components/';
+// @import: 'components/';
+// @import: 'components/';
