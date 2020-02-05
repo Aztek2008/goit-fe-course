@@ -53,11 +53,11 @@
 }
 
 .service__item_web::before {
-  content: url(../img/icons/sevice-graph.svg);
+  content: url(../images/icons/sevice-graph.svg);
 }
 
 .service__item_creative::before {
-  content: url(../img/icons/service-computer.svg);
+  content: url(../src/images/icons/sevice-graph.svg);
 }
 
 .service__item_seo::before {

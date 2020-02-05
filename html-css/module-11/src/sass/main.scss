@@ -2,10 +2,10 @@
  * Все паршалы импортировать в этот файл
  */
 
-@import 'normalize.scss';
-@import: 'helpers\variables';
-@import: 'helpers\mixins';
-@import 'base.scss';
+@import 'normalize';
+@import: 'helpers/variables';
+@import: 'helpers/mixins';
+@import 'base';
 
 
 // COMPONENTS
