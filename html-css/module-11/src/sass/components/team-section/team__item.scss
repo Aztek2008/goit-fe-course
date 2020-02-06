@@ -1,3 +1,16 @@
 .team__item {
   position: relative;
+
+  &:hover .team__hover,
+  &:focus .team__hover {
+    box-shadow: 10px 10px 0px 0px $team-box-shadow;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &:hover .hover__item_socials,
+  &:focus .hover__item_socials {
+    visibility: visible;
+    opacity: 1;
+  }
 }
