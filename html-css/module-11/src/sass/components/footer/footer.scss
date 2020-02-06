@@ -1,0 +1,18 @@
+.footer {
+  font-family: $headers-main-font-stack;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid $main-white-color;
+  font-size: $title-font-size;
+  padding: 10px 0 12px 0;
+  color: $service-title-color;
+}
+
+.footer__legal {
+  margin: 0;
+
+  &_span {
+    color: $accent-color-red;
+  }
+}

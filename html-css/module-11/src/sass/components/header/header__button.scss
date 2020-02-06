@@ -3,6 +3,7 @@
   color: $main-white-color;
   background-color: transparent;
   margin: 0 auto;
+  transition: all .2s linear;
 
   &:hover,
   &:focus {

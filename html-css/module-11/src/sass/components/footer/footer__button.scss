@@ -1,0 +1,17 @@
+.footer__button {
+  font-family: $headers-main-font-stack;
+  background-color: $footer-button-color;
+  border-color: $footer-button-color;
+  color: $main-white-color;
+  line-height: 1.2;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  transition: all .2s linear;
+
+  &:hover,
+  &:focus {
+    background-color: darken($footer-button-color, 10%);
+    border-color: darken($footer-button-color, 10%);
+  }
+}
