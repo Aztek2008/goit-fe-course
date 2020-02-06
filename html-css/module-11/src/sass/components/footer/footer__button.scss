@@ -1,4 +1,5 @@
 .footer__button {
+  @extend %button;
   font-family: $headers-main-font-stack;
   background-color: $footer-button-color;
   border-color: $footer-button-color;

@@ -1,4 +1,5 @@
 .header__button {
+  @extend %button;
   width: 164px;
   color: $main-white-color;
   background-color: transparent;
