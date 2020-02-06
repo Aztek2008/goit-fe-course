@@ -4,9 +4,9 @@
 
 @import 'base';
 @import 'normalize';
+@import 'helpers/placeholders';
 @import 'helpers/variables';
 @import 'helpers/mixins';
-@import 'helpers/placeholders';
 
 
 // COMPONENTS
@@ -16,15 +16,16 @@
 @import 'components/header__container';
 @import 'components/header__nav';
 @import 'components/header__logo';
-@import 'components/header__caption_header';
+@import 'components/header__list';
+@import 'components/header__caption';
 @import 'components/header__title_header';
 @import 'components/button';
 @import 'components/header__button';
 @import 'components/header__item';
 @import 'components/underlined';
-// @import 'components/';
-// @import 'components/';
-// @import 'components/';
+@import 'components/service__list';
+@import 'components/service__item';
+@import 'components/service__title';
 // @import 'components/';
 // @import 'components/';
 // @import 'components/';

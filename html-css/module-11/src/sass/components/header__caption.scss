@@ -4,4 +4,18 @@
   line-height: 1.2;
   padding: 0;
   margin: 0 0 17px;
+
+  &_header {
+    // font-family: $headers-caption-font-stack;
+    font-size: 72px;
+    margin-bottom: 53px;
+  }
+}
+
+.caption {
+  font-family: $service-section-main-font-stack;
+  font-size: 15px;
+  line-height: 24px;
+  color: $caption-color;
+  margin: 0;
 }

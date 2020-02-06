@@ -1,0 +1,24 @@
+&_photo::before {
+    content: "";
+    background-image: url(..src/images/icons/service-clock.svg);
+  }
+
+  &_web::before {
+    content: url(../images/icons/sevice-graph.svg);
+  }
+
+  &_creative::before {
+    content: url(../src/images/icons/sevice-graph.svg);
+  }
+
+  &_seo::before {
+    content: url(../images/icons/service-book.svg);
+  }
+
+  &_css::before {
+    content: url(../src/images/icons/service-house.svg);
+  }
+
+  &_digital::before {
+    content: url(../img/icons/service-target.svg);
+  }
