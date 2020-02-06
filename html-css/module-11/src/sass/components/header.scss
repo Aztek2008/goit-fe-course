@@ -1,20 +1,17 @@
 .header {
   font-family: $headers-main-font-stack;
-  // background-image: -webkit-gradient(linear, left bottom, left top, from($accent-color-yellow), to($accent-color-red-opacity)), url(../src/images/header-image__eagle.png);
-  // background-image: -o-linear-gradient(bottom, $accent-color-yellow, $accent-color-red-opacity), url(../img/header-image__eagle.png);
   background-image: linear-gradient(0deg, $accent-color-yellow, $accent-color-red-opacity), url(../img/header-image__eagle.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   max-width: 100%;
   color: $main-white-color;
+  text-align: center;
   padding-bottom: 185px;
 }
 
 @media (min-resolution: 2dppx) {
   .header {
-    // background-image: -webkit-gradient(linear, left bottom, left top, from($accent-color-yellow), to($accent-color-red-opacity)), url(../img/header-image__eagle@2x.jpg);
-    // background-image: -o-linear-gradient(bottom, $accent-color-yellow), $accent-color-red-opacity), url(../img/header-image__eagle@2x.jpg);
     background-image: linear-gradient(0deg, $accent-color-yellow, $accent-color-red-opacity), url(../img/header-image__eagle@2x.jpg);
   }
 }
