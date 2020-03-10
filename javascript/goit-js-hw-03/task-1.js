@@ -6,30 +6,13 @@ const user = {
   hobby: 'html',
   premium: true,
 };
-console.table(user);
 
-const newUserMood = {
-  mood: 'happy',
+user.mood = 'happy';
+user.hobby = 'skydiving';
+user.premium = false;
+
+const keys = Object.keys(user);
+
+for (const key of keys) {
+  console.table(`${key}: ${user[key]}`);
 };
-
-const newUserHobby = {
-  hobby: 'skydiving',
-};
-
-const newUserType = {
-  premium: false,
-};
-
-const newUser = {
-  ...user,
-  ...newUserMood,
-  ...newUserHobby,
-  ...newUserType,
-};
-console.table(newUser);
-
-const keysOfNewUser = Object.keys(newUser);
-
-for (const key of keysOfNewUser) {
-  console.table(`${key}: ${newUser[key]}`);
-}
