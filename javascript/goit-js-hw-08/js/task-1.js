@@ -10,7 +10,7 @@ const galeryItems = gallery
   .join('');
 const galeryItemOriginals = gallery.map(galeryItem => galeryItem.original);
 const currentImage = document.querySelector('.lightbox__image');
-// console.log(galeryItemOriginals)
+const overlayArea = document.querySelector('div.lightbox__content'); // -- ДО __overlay КЛИК НЕ ДОСТАЕТ
 
 {
   // const galleryElements = {
@@ -18,14 +18,13 @@ const currentImage = document.querySelector('.lightbox__image');
   //   add(picture) {
   //     const element = picture;
   //     this.elements.push(element);
-
   //     return element;
   //   },
   // };
 } // -- НУЖЕН ЛИ ЭТОТ ОБЪЕКТ?
 
-galleryGrid.addEventListener('mouseover', openModal);
-// galleryGrid.addEventListener('click', openModal);  --  НЕ РАБОТАЕТ?
+galleryGrid.addEventListener('mouseover', openModal); // -- ПОСТАВИЛ ТАКОЙ СЛУШАТЕЛЬ ЧТОБЫ ПРОВЕРИТЬ ФУНЦКЦИОНАЛ
+// galleryGrid.addEventListener('click', openModal);  --  НЕ РАБОТАЕТ
 
 appendGalleryElement(galleryGrid, galeryItems);
 
@@ -52,9 +51,7 @@ function appendGalleryElement(parentRef, galleryEl) {
 function openModal(e) {
   modalWindow.addEventListener('click', closeModal);
   document.addEventListener('keydown', closeModal);
-  // document.addEventListener('keydown', event => {
-  //   console.dir(event.code);
-  // });
+  document.addEventListener('keydown', moveImage);
 
   if (e.target === e.currentTarget) {
     return;
@@ -65,9 +62,40 @@ function openModal(e) {
 }
 
 function closeModal(e) {
-  if (e.target === modalWindowCloseBtn || e.target === 'Escape') {
+  if (
+    e.target === modalWindowCloseBtn ||
+    e.target === 'Escape' ||
+    e.target === overlayArea
+  ) {
     modalWindow.classList.remove('is-open');
     modalWindow.removeEventListener('click', closeModal);
     currentImage.srcset = '';
   }
-};
+}
+
+function moveImage(e) {
+  const items = document.querySelectorAll('.gallery__item');
+  const modalCurrentImage = document.querySelector('.is-open img');
+  const modalCurrentSrc = modalCurrentImage.srcset;
+
+  if (e.code === 'ArrowRight') {
+    for (let item of items) {
+      if (item.lastElementChild.href === modalCurrentSrc) {
+        const nextImageLink = item.previousElementSibling.lastElementChild.href;
+        currentImage.srcset = nextImageLink;
+      }
+    }
+  }
+
+  if (e.code === 'ArrowLeft') {
+    for (let item of items) {
+      if (item.lastElementChild.href === modalCurrentSrc) {
+        const prevImageLink = item.previousElementSibling.lastElementChild.href;
+        currentImage.srcset = prevImageLink;
+      }
+    }
+  }
+}
+// ЕСЛИ ЛИСТАТЬ БЫСТРО, В КОНСОЛИ ПОКАЗЫВАЕТ ТАКУЮ ОШИБКУ:
+// task-1.js:86 Uncaught TypeError: Cannot read property 'lastElementChild' of null
+// at HTMLDocument.moveImage (task-1.js:86)
