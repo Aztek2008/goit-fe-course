@@ -81,7 +81,7 @@ function moveImage(e) {
   if (e.code === 'ArrowRight') {
     for (let item of items) {
       if (item.lastElementChild.href === modalCurrentSrc) {
-        const nextImageLink = item.previousElementSibling.lastElementChild.href;
+        const nextImageLink = item.nextElementSibling.lastElementChild.href;
         currentImage.srcset = nextImageLink;
       }
     }
