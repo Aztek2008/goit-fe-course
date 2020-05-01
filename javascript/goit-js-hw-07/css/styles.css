@@ -11,17 +11,27 @@
   height: 300px;
   margin: 0 auto;
   background-color: rgba(255, 99, 71, .1);
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  position: absolute;
 }
 
 .image__wrapper {
+  display: flex;
   list-style: none;
-  height: 100%;
-  overflow: hidden;
+  width: 100%;
+  /* position: absolute;
+  left: 0; */
 }
 
 .image {
   object-fit: cover;
-  height: 100%;
   width: 500px;
 }
 

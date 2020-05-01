@@ -14,8 +14,14 @@ input.addEventListener('blur', (event) => {
   const dataSetLength = crntTarget.dataset.length;
 
   if (inputLength === Number(dataSetLength)) {
+    if (crntTarget.classList.contains('invalid')) {
+      crntTarget.classList.remove('invalid');
+    }
     crntTarget.classList.add('valid');
   } else {
+    if (crntTarget.classList.contains('valid')) {
+      crntTarget.classList.remove('valid');
+    }
     crntTarget.classList.add('invalid');
   }
 });

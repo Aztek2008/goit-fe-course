@@ -24,50 +24,50 @@ const images = [{
 ];
 
 const slider = document.querySelector('ul#gallery');
+let activeSlide = 0;
 
 insertLayout(slider, buildLayout());
+const container = document.querySelector("div.container");
 
 function insertLayout(parentEl, layoutEl) {
   parentEl.insertAdjacentHTML('beforeend', layoutEl);
 }
 
-function buildLayout(images) {
-  // return
-  `
+
+function buildLayout() {
+  return `
+  <div class="container">
     ${images
       .map(
         image => `
-            <li class = "image__wrapper">
-            <img src = ${image.url} alt = ${image.alt} class="image" />
-            </li>
-            `,
+          <li class = "image__wrapper">
+          <img src = ${image.url} alt = ${image.alt} class = "image" width = "100%"/>
+          </li>
+        `
       )
-      .join('')}
-            <button class = "arrow arrow--prev js-prev"></button>
-            <button class = "arrow arrow--next js-next"></button>
-            `;
+    .join('')}
+  </div>
+  <button class = "arrow arrow--prev js-prev"></button>
+  <button class = "arrow arrow--next js-next"></button>
+  `;
 }
 
-console.log(buildLayout(images));
-
 function moveLeft() {
-  if (this.activeSlide > 0) {
-    this.activeSlide--;
-    this.container.style.left = -500 * this.activeSlide + 'px';
+  if (activeSlide > 0) {
+    activeSlide--;
+    container.style.left = -500 * activeSlide + 'px';
   }
 }
 
 function moveRight() {
-  if (this.activeSlide < this.images.length - 1) {
-    this.activeSlide++;
-    this.container.style.left = -500 * this.activeSlide + 'px';
+  if (activeSlide < images.length - 1) {
+    activeSlide++;
+    container.style.left = -500 * activeSlide + 'px';
   }
 }
 
-function initListener() {
-  this.prev = document.querySelector('.js-prev');
-  this.next = document.querySelector('.js-next');
+const prev = document.querySelector('.js-prev');
+const next = document.querySelector('.js-next');
 
-  this.prev.addEventListener('click', this.moveLeft.bind(this));
-  this.next.addEventListener('click', this.moveRight.bind(this));
-}
+prev.addEventListener('click', moveLeft);
+next.addEventListener('click', moveRight);
