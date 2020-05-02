@@ -8,24 +8,9 @@ const modalWindowCloseBtn = document.querySelector('button.lightbox__button');
 const galeryItems = gallery
   .map(galeryItem => buildGalleryElement(galeryItem))
   .join('');
-const galeryItemOriginals = gallery.map(galeryItem => galeryItem.original);
 const currentImage = document.querySelector('.lightbox__image');
-const overlayArea = document.querySelector('div.lightbox__content'); // -- ДО __overlay КЛИК НЕ ДОСТАЕТ
+const overlayArea = document.querySelector('div.lightbox__content');
 const galleryItemOrigLinks = gallery.map(item => item.original);
-// console.dir(galleryItemOrigLinks);
-
-{
-  // const galleryElements = {
-  //   elements: [],
-  //   add(picture) {
-  //     const element = picture;
-  //     this.elements.push(element);
-  //     return element;
-  //   },
-  // };
-} // -- НУЖЕН ЛИ ЭТОТ ОБЪЕКТ?
-
-// console.log(gallery)
 
 galleryGrid.addEventListener('click', openModal);
 
@@ -40,6 +25,8 @@ function buildGalleryElement(e) {
       class="gallery__image"
         src="${e.preview}"
         data-source="${e.original}"
+        data-index="${e.index}"
+        data-source="${e.original}"
       alt="${e.description}"
     />
   </a>
@@ -51,6 +38,12 @@ function appendGalleryElement(parentRef, galleryEl) {
   parentRef.insertAdjacentHTML('beforeend', galleryEl);
 }
 
+const links = document.querySelectorAll('.gallery__image');
+
+links.forEach((item, index) => {
+  item.setAttribute("data-index", index)
+});
+
 function openModal(e) {
   e.preventDefault();
   modalWindow.addEventListener('click', closeModal);
@@ -61,9 +54,14 @@ function openModal(e) {
     return;
   }
   modalWindow.classList.add('is-open');
-  currentImage.srcset = galleryItemOrigLinks.find((item) => item === e.target.dataset.source);
 
-}
+  galleryItemOrigLinks.find((item, index) => {
+    if (item === e.target.dataset.source) {
+      currentImage.srcset = item;
+      currentImage.dataset.index = index;
+    }
+  });
+};
 
 function closeModal(e) {
   if (
@@ -76,73 +74,20 @@ function closeModal(e) {
     currentImage.srcset = '';
   }
 };
-/////////////////////////////////////////////////////////////////////////////////////////
 
 function moveImage(e) {
-  // const items = document.querySelectorAll('.gallery__item');
-  const modalCurrentImage = document.querySelector('.is-open img');
-  // const modalCurrentSrc = modalCurrentImage.srcset;
-
-  const currentIndex = modalCurrentImage.dataset.index;
-  console.log(modalCurrentImage)
+  let currentIndex = galleryItemOrigLinks
+    .findIndex(item => item === currentImage.srcset);
 
   if (e.code === 'ArrowRight') {
-    moveLeft(currentIndex);
-  }
+    if (currentIndex < galleryItemOrigLinks.length - 1) {
+      currentImage.srcset = galleryItemOrigLinks[currentIndex + 1];
+    }
+  };
 
   if (e.code === 'ArrowLeft') {
-    moveRight(currentIndex);
-  }
-}
-
-
-const moveLeft = currentIndex => {
-  const targetSource = galleryItemOrigLinks[currentIndex - 1];
-
-  if (targetSource) {
-    currentImage.srcset = targetSource;
-  }
+    if (currentIndex > 0) {
+      currentImage.srcset = galleryItemOrigLinks[currentIndex - 1];
+    }
+  };
 };
-
-const moveRight = currentIndex => {
-  const targetSource = galleryItemOrigLinks[currentIndex + 1];
-
-  if (targetSource) {
-    currentImage.srcset = targetSource;
-  }
-};
-
-
-
-
-
-
-
-
-////////////////////////////////////////////////////////////////////////////////////////
-// function moveImage(e) {
-//   const items = document.querySelectorAll('.gallery__item');
-//   const modalCurrentImage = document.querySelector('.is-open img');
-//   const modalCurrentSrc = modalCurrentImage.srcset;
-
-//   if (e.code === 'ArrowRight') {
-//     for (let item of items) {
-//       if (item.lastElementChild.href === modalCurrentSrc) {
-//         const nextImageLink = item.nextElementSibling.lastElementChild.href;
-//         currentImage.srcset = nextImageLink;
-//       }
-//     }
-//   }
-
-//   if (e.code === 'ArrowLeft') {
-//     for (let item of items) {
-//       if (item.lastElementChild.href === modalCurrentSrc) {
-//         const prevImageLink = item.previousElementSibling.lastElementChild.href;
-//         currentImage.srcset = prevImageLink;
-//       }
-//     }
-//   }
-// }
-// ЕСЛИ ЛИСТАТЬ БЫСТРО, В КОНСОЛИ ПОКАЗЫВАЕТ ТАКУЮ ОШИБКУ:
-// task-1.js:86 Uncaught TypeError: Cannot read property 'lastElementChild' of null
-// at HTMLDocument.moveImage (task-1.js:86)//
