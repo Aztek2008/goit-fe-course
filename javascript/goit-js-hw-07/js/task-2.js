@@ -15,11 +15,12 @@ const ingredients = [
 
 const ingridientsList = document.querySelector('ul#ingredients');
 
-const stringOfLi = ingredients
-    .map(ingridient => document
-        .createElement('li').textContent = `<li>${ingridient}</li>`)
-    .join('');
+const arrayOfLi = ingredients.map((ingridient) => {
+    const li = document.createElement('li');
+    li.textContent = ingridient;
+    return li;
+});
 
-const result = ingridientsList.insertAdjacentHTML('afterbegin', stringOfLi);
+ingridientsList.append(...arrayOfLi);
 
 console.log(ingridientsList);
