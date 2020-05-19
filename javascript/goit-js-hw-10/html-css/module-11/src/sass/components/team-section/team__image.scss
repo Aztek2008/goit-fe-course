@@ -1,0 +1,16 @@
+.team__image {
+  margin-bottom: 29px;
+}
+
+.team__title {
+  margin-bottom: 10px;
+
+  &_caption {
+    font-family: $service-section-main-font-stack;
+    font-style: italic;
+    color: $caption-color;
+    font-size: $title-font-size;
+    line-height: 24px;
+    margin: 0 0 40px;
+  }
+}

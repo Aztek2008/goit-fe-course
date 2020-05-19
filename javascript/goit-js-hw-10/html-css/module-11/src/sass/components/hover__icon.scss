@@ -1,0 +1,15 @@
+.hover__icon {
+  display: block;
+  padding: 15px;
+  width: 55px;
+  height: 55px;
+  fill: $accent-color-red;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color-red;
+    fill: $main-white-color;
+  }
+}

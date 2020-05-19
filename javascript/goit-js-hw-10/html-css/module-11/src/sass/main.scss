@@ -1,0 +1,37 @@
+/*
+ * Все паршалы импортировать в этот файл
+ */
+
+@import 'base';
+@import 'normalize';
+@import 'helpers/placeholders';
+@import 'helpers/variables';
+@import 'helpers/mixins';
+
+
+// COMPONENTS
+
+@import 'components/container';
+@import 'components/header/header';
+@import 'components/header/header__container';
+@import 'components/header/header__nav';
+@import 'components/header/header__logo';
+@import 'components/header/header__list';
+@import 'components/header/header__caption';
+@import 'components/header/header__title';
+@import 'components/header/header__button';
+@import 'components/header/header__item';
+@import 'components/underlined';
+@import 'components/service-section/service__list';
+@import 'components/service-section/service__item';
+@import 'components/service-section/service__title';
+@import 'components/team-section/team__caption';
+@import 'components/team-section/team__list';
+@import 'components/team-section/team__item';
+@import 'components/team-section/team__image';
+@import 'components/hover-menu';
+@import 'components/hover__list_socials';
+@import 'components/hover__icon';
+@import 'components/footer/footer__button';
+@import 'components/footer/footer__form';
+@import 'components/footer/footer';
