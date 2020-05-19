@@ -1,4 +1,5 @@
 //
+// import menu from '../../menu.json';
 
 const checkbox = document.querySelector('input.js-switch-input');
 const body = document.querySelector('body');
