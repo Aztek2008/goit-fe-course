@@ -1,7 +1,11 @@
-import './js/build-menu';
-import menu from '../menu.json';
-import courseTemplate from '../src/templates/course-template-item.hbs';
+// import menu from '../menu.json';
+// import courseTemplate from '../src/templates/course-template-item.hbs';
+import {
+  buildMainMenu
+} from './js/build-menu';
 import './styles.css';
+
+buildMainMenu();
 
 // const checkbox = document.querySelector('input.js-switch-input');
 // const body = document.querySelector('body');
@@ -55,15 +59,4 @@ import './styles.css';
 // //   body.classList.toggle(Theme.DARK);
 // //   localStorage.setItem("Theme", body.className)
 // // }
-
-// ////////////////////////////  NOT WORKING ARROW FUNC ///////////////////////////
-// // const body = document.querySelector('body');
-// //
-// // body.addEventListener('click', addTheme);
-// //
-// // const addTheme = event => console.log(event.target); ----------THIS DOESN'T
-// //
-// // function addTheme(event) { console.log(event.target) } ---------THIS WORKS
-// //
-
-// ////////////////////////////  NOT WORKING CODE ///////////////////////////////
+// //  ------------ TOGGLE SWITCH OPTION -------------------  //

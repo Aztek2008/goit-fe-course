@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/luxplanjay/webpack-starter-kit/issues"
   },
-  "homepage": "https://Aztek2008.github.io/goit-fe-course/javascript/goit-js-hw-10",
+  "homepage": "https://aztek2008.github.io/goit-fe-course/javascript/goit-js-hw-10/build/",
   "devDependencies": {
     "@babel/core": "^7.8.7",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
