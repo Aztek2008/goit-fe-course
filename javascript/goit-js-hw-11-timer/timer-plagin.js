@@ -4,12 +4,8 @@
 
 export class CountdownTimer {
   constructor(selector, targetDate) {
-    selector = document.getElementById(this.selector);
-    targetDate;
-    daysSpan = selector.querySelector('[data-value="days"]');
-    hourSpan = selector.querySelector('[data-value="hours"]');
-    inuteSpan = selector.querySelector('[data-value="mins"]');
-    secondSpan = selector.querySelector('[data-value="secs"]');
+    this.selector = document.querySelector(selector);
+    this.targetDate = targetDate;
   };
 
   // isActive = true;
@@ -29,6 +25,11 @@ export class CountdownTimer {
   }
 
   updateClockFace() {
+    const daysSpan = this.selector.querySelector('[data-value="days"]');
+    const hourSpan = this.selector.querySelector('[data-value="hours"]');
+    const minuteSpan = this.selector.querySelector('[data-value="mins"]');
+    const secondSpan = this.selector.querySelector('[data-value="secs"]');
+
     daysSpan.textContent = `${days}`;
     hourSpan.textContent = `${hours}`;
     minuteSpan.textContent = `${mins}`;
