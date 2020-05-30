@@ -14,7 +14,7 @@ export const makeTransaction = transaction => {
       const canProcess = Math.random() > 0.3;
 
       if (canProcess) {
-        resolved(transaction.id);
+        resolved({ id: transaction.id, time: delay });
       } else {
         rejected(transaction.id);
       }
@@ -23,7 +23,7 @@ export const makeTransaction = transaction => {
   return promise;
 };
 
-export const logSuccess = (id, time) => {
+export const logSuccess = ({ id, time }) => {
   console.log(`Transaction ${id} processed in ${time} ms`);
 };
 
