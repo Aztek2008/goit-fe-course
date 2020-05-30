@@ -7,13 +7,14 @@ export const randomIntegerFromInterval = (min, max) => {
 };
 
 export const makeTransaction = transaction => {
+  console.log('transaction', transaction);
   const delay = randomIntegerFromInterval(200, 500);
   const promise = new Promise((resolved, rejected) => {
     setTimeout(() => {
       const canProcess = Math.random() > 0.3;
 
       if (canProcess) {
-        resolved(transaction.id, delay);
+        resolved(transaction.id);
       } else {
         rejected(transaction.id);
       }
