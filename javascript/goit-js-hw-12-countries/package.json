@@ -51,6 +51,7 @@
   "dependencies": {
     "core-js": "^3.6.4",
     "handlebars": "^4.7.6",
-    "imagemin": "^6.1.0"
+    "imagemin": "^6.1.0",
+    "lodash.debounce": "^4.0.8"
   }
 }

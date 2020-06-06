@@ -1,22 +1,67 @@
-'use strict';
+import fetchCountry from './fetchCountries';
+import loadedCountriesTemplate from '../templates/loaded-countries.hbs';
+import matchedCountryTemplate from '../templates/matched-country.hbs';
+import { engAlphabet } from './engAlphabet';
 
-import fetchCountry from './fetchCountries.js';
-// import { debounce } from 'lodash';
-import { debounce } from '../../node_modules/lodash'; // пропадает ошибка пути только если полный указываю
-
+const debounce = require('lodash.debounce');
 const queryField = document.querySelector('#search-form');
-console.log(queryField);
+const countryList = document.querySelector('#country-list');
+const countryBox = document.querySelector('#matched-country-box');
 
-// queryField.addEventListener('input', outputValue);
-queryField.addEventListener('input', debounce(outputValue, 500));
+queryField.addEventListener('input', debounce(buildQueryList, 500));
 
-function outputValue(e) {
-  const form = e.currentTarget;
-  const input = form.elements.query;
+function buildQueryList(e) {
+  e.preventDefault();
 
-  // fetchCountry.searchQuery = input.value;
+  const input = queryField.elements.query.value;
+  const testLetter = input.substring(0, 1).toUpperCase();
+  const engLetter = engAlphabet.includes(testLetter);
 
-  console.dir(input.value);
-  // return outputValue;
+  if (!engLetter) {
+    return;
+  }
+
+  clearListItems();
+  clearCountryBox();
+
+  fetchCountry
+    .fetchCountries(input)
+    .then(data => {
+      const dataName = data[0].name.toLowerCase();
+      const existingLetterCombination = dataName.indexOf(input.toLowerCase());
+
+      clearListItems();
+      clearCountryBox();
+      buildMachedCountryList(data);
+      return data;
+    })
+    .then(data => {
+      if (countryList.childElementCount === 1) {
+        clearListItems();
+        clearCountryBox();
+        buildMachedCountryBlock(data);
+        return data.name;
+      }
+    })
+    .catch(error => {
+      console.warn('error', error);
+    });
 }
-fetchCountry.fetchCountries().then(data => console.table(data));
+
+function buildMachedCountryList(items) {
+  const markup = loadedCountriesTemplate(items);
+  countryList.insertAdjacentHTML('beforeend', markup);
+}
+
+function buildMachedCountryBlock(item) {
+  const markup = matchedCountryTemplate(item);
+  countryBox.insertAdjacentHTML('beforeend', markup);
+}
+
+function clearListItems() {
+  countryList.innerHTML = '';
+}
+
+function clearCountryBox() {
+  countryBox.innerHTML = '';
+}

@@ -1,0 +1,18 @@
+{{#each this}}
+
+<h2 class="country-header">{{name}}</h2>
+<div class="block specs-block">
+  <p><b>Capital: </b>{{capital}}</p>
+  <p><b>Population: </b>{{population}}</p>
+  <p><b>Languages: </b></p>
+  <ul class="lang-list">
+    {{#each languages}}
+    <li>{{name}}</li>
+    {{/each}}
+  </ul>
+</div>
+<div class="block flag-block">
+  <img class="flag-image" src="{{flag}}" alt="Flag Image" width="280">
+</div>
+
+{{/each}}
