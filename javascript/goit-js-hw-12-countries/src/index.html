@@ -7,7 +7,8 @@
     <title>HW-12-Countries</title>
   </head>
 
-  <body>
+  <body id="body">
+    <!-- SEARCH INPUT -->
     <form class="search-form" id="search-form">
       <input
         type="text"
@@ -16,16 +17,9 @@
         autocomplete="off"
       />
     </form>
-
+    <!-- LIST OF CONCURRENTS -->
     <ul class="country-list" id="country-list"></ul>
+    <!-- LAYOUT BLOCK FOR MATCHED COUNTRY -->
     <div class="matched-country-box" id="matched-country-box"></div>
-    <!-- <script type="module" src="./index.js"></script> -->
-    <!--
-      если убираю type="module", ругается на index.js:
-       - Uncaught SyntaxError: Cannot use import statement outside a module;
-    если оставляю:
-      Failed to load module script: The server responded with a non-JavaScript MIME type of "text/html".
-      Strict MIME type checking is enforced for module scripts per HTML spec.
-     -->
   </body>
 </html>
