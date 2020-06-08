@@ -43,7 +43,7 @@ function buildQueryList(e) {
       if (countryList.childElementCount > 10) {
         clearListItems();
         clearCountryBox();
-        notice();
+        notice(alert);
       }
 
       if (countryList.childElementCount === 1) {
