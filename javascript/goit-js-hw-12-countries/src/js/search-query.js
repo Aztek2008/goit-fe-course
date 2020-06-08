@@ -1,30 +1,8 @@
-import '@pnotify/core/dist/BrightTheme.css';
-import { alert, Stack } from '@pnotify/core';
-
-const myStack = new Stack({
-  modal: true,
-  context: document.getElementById('body'),
-});
-
-function notice() {
-  alert({
-    title: false,
-    closer: false,
-    sticker: false,
-    icon: true,
-    maxOpen: 1,
-    text: 'Too many matches found. Please use more specific query.',
-    width: '400px',
-    maxTextHeight: null,
-    type: 'error',
-    stack: myStack,
-  });
-}
-
 import fetchCountry from './fetchCountries';
 import loadedCountriesTemplate from '../templates/loaded-countries.hbs';
 import matchedCountryTemplate from '../templates/matched-country.hbs';
 import { engAlphabet } from './engAlphabet';
+import { myStack, notice } from './pnotify-alerts';
 
 const debounce = require('lodash.debounce');
 const queryField = document.querySelector('#search-form');
@@ -51,14 +29,15 @@ function buildQueryList(e) {
     .fetchCountries(input)
     .then(data => {
       const dataName = data[0].name.toLowerCase();
-      // ЕСЛИ УБРАТЬ СТРОКУ ВЫШЕ, ТО В СЛУЧАЕ НЕВЕРНОЙ КОМБИНАЦИИ СИМВОЛОВ ПОЯВЛЯЮТСЯ ПУСТЫЕ ЭЛЕМЕНТЫ В СПИСКЕб
-      // НО ЭТА ПЕРЕМЕННАЯ НИГДЕ НЕ ИСПОЛЬЗУЕТСЯ. ПОЧЕМУ ТАК?
-      // const existingLetterCombination = dataName.indexOf(input.toLowerCase());
-      myStack.close();
-      clearListItems();
-      clearCountryBox();
-      buildMachedCountryList(data);
-      return data;
+      const existingLetterCombination = dataName.indexOf(input.toLowerCase());
+
+      if (existingLetterCombination > -1) {
+        myStack.close();
+        clearListItems();
+        clearCountryBox();
+        buildMachedCountryList(data);
+        return data;
+      }
     })
     .then(data => {
       if (countryList.childElementCount > 10) {
@@ -77,7 +56,7 @@ function buildQueryList(e) {
       }
     })
     .catch(error => {
-      console.warn('error', error);
+      console.warn('Entered query does not exist, please check your query');
     });
 }
 
