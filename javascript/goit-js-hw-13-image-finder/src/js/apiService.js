@@ -1,5 +1,5 @@
 import InfiniteScroll from 'infinite-scroll';
-const mainUrl = `http://pixabay.com/api/?image_type=photo&orientation=horizontal&`;
+const mainUrl = `https://pixabay.com/api/?image_type=photo&orientation=horizontal&`;
 const galleryContainer = document.querySelector('#gallery');
 
 export default {
@@ -42,7 +42,7 @@ export default {
     history: false,
 
     path() {
-      return `http://pixabay.com/api/?image_type=photo
+      return `https://pixabay.com/api/?image_type=photo
       &orientation=horizontal
       &q=${this.query}
       &page=${this.pageIndex}
