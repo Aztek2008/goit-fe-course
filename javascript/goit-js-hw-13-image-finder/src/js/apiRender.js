@@ -1,3 +1,4 @@
+import { infScrollInstance } from './infinite-scroll';
 import apiService from './apiService';
 import pictureItemTemplate from '../templates/photo-card.hbs';
 
@@ -5,8 +6,6 @@ const refs = {
   searchForm: document.querySelector('#search-form'),
   galleryList: document.querySelector('#gallery'),
 };
-
-console.dir(refs.searchForm.elements.query);
 
 refs.searchForm.addEventListener('submit', searchFormSubmitHandler);
 
@@ -17,15 +16,12 @@ function searchFormSubmitHandler(e) {
   const input = form.elements.query;
 
   clearListItems();
-
   apiService.resetPage();
-
   apiService.searchQuery = input.value;
 
   apiService
     .fetchImages()
     .then(images => {
-      console.log(images);
       insertListItems(images);
     })
     .catch(error => {
@@ -42,16 +38,14 @@ function clearListItems() {
   refs.galleryList.innerHTML = '';
 }
 
-apiService.infScrollInstance.on('load', (response, url) => {
+infScrollInstance.on('load', response => {
   const images = JSON.parse(response);
   const markup = images.map(image => postTemplate(image)).join('');
   const proxyEl = document.createElement('div');
 
   proxyEl.innerHTML = markup;
-
   const parsedItems = proxyEl.querySelectorAll('.item');
-
-  apiService.infScrollInstance.appendItems(parsedItems);
+  infScrollInstance.appendItems(parsedItems);
 });
 
-apiService.infScrollInstance.loadNextPage();
+infScrollInstance.loadNextPage();

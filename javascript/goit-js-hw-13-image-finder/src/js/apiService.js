@@ -1,6 +1,5 @@
 import InfiniteScroll from 'infinite-scroll';
 const mainUrl = `https://pixabay.com/api/?image_type=photo&orientation=horizontal&`;
-const galleryContainer = document.querySelector('#gallery');
 
 export default {
   page: 1,
@@ -36,18 +35,4 @@ export default {
   resetPage() {
     this.page = 1;
   },
-
-  infScrollInstance: new InfiniteScroll(galleryContainer, {
-    responseType: 'text',
-    history: false,
-
-    path() {
-      return `https://pixabay.com/api/?image_type=photo
-      &orientation=horizontal
-      &q=${this.query}
-      &page=${this.pageIndex}
-      &per_page=${this.perPage}
-      &key=${this.key}`;
-    },
-  }),
 };

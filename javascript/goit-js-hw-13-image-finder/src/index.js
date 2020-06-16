@@ -1,8 +1,8 @@
 // import InfiniteScroll from 'infinite-scroll';
 import apiRender from './js/apiRender';
-import apiService from './js/apiService';
-
 import './styles.css';
+
+// apiRender.infScrollInstance.loadNextPage();
 
 //===================================================================
 //
