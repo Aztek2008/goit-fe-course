@@ -1,10 +1,10 @@
-import { infScrollInstance } from './infinite-scroll';
 import apiService from './apiService';
 import pictureItemTemplate from '../templates/photo-card.hbs';
 
 const refs = {
   searchForm: document.querySelector('#search-form'),
   galleryList: document.querySelector('#gallery'),
+  bottomLine: document.querySelector('#scroll-bottom-line'),
 };
 
 refs.searchForm.addEventListener('submit', searchFormSubmitHandler);
@@ -27,6 +27,10 @@ function searchFormSubmitHandler(e) {
     .catch(error => {
       console.warn(error);
     });
+
+  setTimeout(() => {
+    loadMore();
+  }, 1000);
 }
 
 function insertListItems(items) {
@@ -38,14 +42,34 @@ function clearListItems() {
   refs.galleryList.innerHTML = '';
 }
 
-infScrollInstance.on('load', response => {
-  const images = JSON.parse(response);
-  const markup = images.map(image => postTemplate(image)).join('');
-  const proxyEl = document.createElement('div');
+function loadMore() {
+  let globalScrollHeight = refs.galleryList.scrollHeight;
+  const options = {
+    rootMargin: '50px',
+  };
 
-  proxyEl.innerHTML = markup;
-  const parsedItems = proxyEl.querySelectorAll('.item');
-  infScrollInstance.appendItems(parsedItems);
-});
+  const onEntry = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        apiService.incrementPage();
+        apiService
+          .fetchImages()
+          .then(images => {
+            insertListItems(images);
+            globalScrollHeight += globalScrollHeight;
+            scrollTo({
+              top: `${globalScrollHeight}`,
+              behavior: 'smooth',
+            });
+          })
+          .catch(error => {
+            console.warn(error);
+          });
+      }
+    });
+  };
 
-infScrollInstance.loadNextPage();
+  const observer = new IntersectionObserver(onEntry, options);
+
+  observer.observe(refs.bottomLine);
+}

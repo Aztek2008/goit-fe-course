@@ -1,4 +1,3 @@
-import InfiniteScroll from 'infinite-scroll';
 const mainUrl = `https://pixabay.com/api/?image_type=photo&orientation=horizontal&`;
 
 export default {
