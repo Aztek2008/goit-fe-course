@@ -18,6 +18,7 @@
         name="query"
         autocomplete="off"
         placeholder="Search images..."
+        autofocus
       />
     </form>
 
@@ -27,11 +28,15 @@
     <div class="scroll-bottom-line" id="scroll-bottom-line"></div>
 
     <!--
-      Модальное окно для полноразмерного изображения
+      Модальное окно для полноразмерного изображения///
+      Не понимаю как его вставлять динамически.
+      При добавлении уже после загрузки ДОМа, через insertAdjacentHTML,
+      в конец body добавляется файл скрипта
+      и модульное окно добавляется уже после него но перед закр тегом/
+      может это и не связано, но уже кидает ошибку.
     -->
     <div class="lightbox js-lightbox">
       <div class="lightbox__overlay"></div>
-
       <div class="lightbox__content">
         <img class="lightbox__image" src="#" alt="" />
       </div>

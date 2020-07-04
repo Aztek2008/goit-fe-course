@@ -1,3 +1,6 @@
-import apiRender from './js/apiRender';
-import './js/modal-window';
+import { initApiRender } from './js/apiRender';
+import { initModal } from './js/modal-window';
 import './styles.css';
+
+initApiRender();
+initModal();

@@ -7,7 +7,9 @@ const refs = {
   bottomLine: document.querySelector('#scroll-bottom-line'),
 };
 
-refs.searchForm.addEventListener('submit', searchFormSubmitHandler);
+export function initApiRender() {
+  refs.searchForm.addEventListener('submit', searchFormSubmitHandler);
+}
 
 function searchFormSubmitHandler(e) {
   e.preventDefault();
@@ -23,14 +25,28 @@ function searchFormSubmitHandler(e) {
     .fetchImages()
     .then(images => {
       insertListItems(images);
+      console.log('Количество фотографий', refs.galleryList.childElementCount);
+
+      setTimeout(() => {
+        changeOpacity('.stats-item');
+      }, 1000);
     })
     .catch(error => {
       console.warn(error);
     });
 
+  // loadMore(); без задержки никак не удается добиться чтобы не пачками грузились фото.
+  //  Мин высота картинок не дает эффекта - только растянутые картинки
   setTimeout(() => {
     loadMore();
   }, 1000);
+}
+
+function changeOpacity(className) {
+  document.querySelectorAll(className).forEach(el => {
+    el.style.transition = 'opacity 0.3s linear 0s';
+    el.style.opacity = 1;
+  });
 }
 
 function insertListItems(items) {
@@ -42,31 +58,42 @@ function clearListItems() {
   refs.galleryList.innerHTML = '';
 }
 
+// Draft for scroll-up button
+// scrollTo({
+//  let globalScrollHeight = refs.galleryList.scrollHeight;
+//   top: `${globalScrollHeight - window.innerHeight * 2}`,
+//   behavior: 'smooth',
+// });
+
 function loadMore() {
-  let globalScrollHeight = refs.galleryList.scrollHeight;
   const options = {
-    rootMargin: '50px',
+    rootMargin: '100px',
   };
 
   const onEntry = (entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        apiService.incrementPage();
-        apiService
-          .fetchImages()
-          .then(images => {
-            insertListItems(images);
-            globalScrollHeight += globalScrollHeight;
-            scrollTo({
-              top: `${globalScrollHeight}`,
-              behavior: 'smooth',
-            });
-          })
-          .catch(error => {
-            console.warn(error);
-          });
-      }
-    });
+    const entry = entries[0];
+
+    if (!entry.isIntersecting) {
+      return;
+    }
+    apiService.incrementPage();
+    apiService
+      .fetchImages()
+      .then(images => {
+        insertListItems(images);
+
+        setTimeout(() => {
+          changeOpacity('.stats-item');
+        }, 1000);
+
+        console.log(
+          'Количество фотографий',
+          refs.galleryList.childElementCount,
+        );
+      })
+      .catch(error => {
+        console.warn(error);
+      });
   };
 
   const observer = new IntersectionObserver(onEntry, options);
